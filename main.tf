@@ -13,11 +13,11 @@ provider "azurerm" {
   features {}
 }
 
-# Create a resource group
-resource "azurerm_resource_group" "my-RG" {
-  name     = "spdtrainingRG"
-  location = "centralindia"
-}
+## Create a resource group
+#resource "azurerm_resource_group" "my-RG" {
+#  name     = "spdtrainingRG"
+#  location = "centralindia"
+#}
 
 resource "azurerm_virtual_network" "vnetdeploy" {
   name                = "spd-vnet"
