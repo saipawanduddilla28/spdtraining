@@ -18,3 +18,10 @@ resource "azurerm_resource_group" "my-RG" {
   name     = "spdtrainingRG"
   location = "centralindia"
 }
+
+resource "azurerm_virtual_network" "vnetdeploy" {
+  name                = "spd-vnet"
+  address_space       = ["10.0.0.0/16"]
+  location            = azurerm_resource_group.my-RG.location
+  resource_group_name = azurerm_resource_group.my-RG.name
+}
